@@ -1,0 +1,27 @@
+.question {
+    padding: 10px;
+    background-color: #fff;
+    
+    margin-bottom: 20px;
+  }
+
+.answer {
+    padding: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+}
+
+img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.row {
+    border: solid #ccc;
+    border-width: 1px;
+}
+
+.test-bg {
+    background-color: black;
+}
