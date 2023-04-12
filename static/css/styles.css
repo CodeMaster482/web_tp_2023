@@ -1,7 +1,8 @@
 .question {
     padding: 10px;
     background-color: #fff;
-    
+    border: solid #ccc;
+    border-width: 1px;
     margin-bottom: 20px;
   }
 
@@ -13,15 +14,21 @@
 
 img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: auto;
 }
 
-.row {
-    border: solid #ccc;
-    border-width: 1px;
-}
+
 
 .test-bg {
     background-color: black;
+}
+
+.btn-upvote {
+    background-image: url(static/images/upvote.svg);
+    background-color: #fff;
+}
+
+.popular-tag, .best-member {
+    margin-bottom: 5%;
 }
