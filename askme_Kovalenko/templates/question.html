@@ -1,0 +1,44 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="col-13">
+        <div style=" margin-top: 20px;"></div>
+          <div class="row new-questions-title">
+          <div class="col-3">
+              <div class="question-avatar">
+                <img src="{% static 'images/avatar.png' %}" alt="avatar">
+              </div>
+            </div>
+            <div class="col-6">
+              <h2>How to build a moon park?</h2>
+              <div class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur...</div>
+             <div class="row">
+               <div class="col-8">
+                   Tags:
+                 <a href="#">black_jack</a>,
+                 <a href="#">black_jack</a>
+               </div>
+             </div>
+            </div>
+            <div class="col-2">
+              {% include 'inc/vote.html' %}
+            </div>
+        </div>
+        <div style="border-top: 1px solid black; margin-top: 20px; margin-bottom: 20px"></div>
+
+
+        {% for i in '012'|make_list %}
+            {% include 'inc/answer.html' %}
+        {% endfor %}
+
+        <div style="border-top: 1px solid black; margin-bottom: 20px; margin-top: 20px;"></div>
+
+        <div class="NewAnswer row">
+          <textarea class="form-control" id="NewQuestionText" rows="6" placeholder="Enter your answer here.." style="width: 100%"></textarea>
+          <div class="NewAnswer mt-3 mb-3"><button class="btn btn-dark" type="submit">Answer</button></div>
+        </div>
+</div>
+{% endblock content %}

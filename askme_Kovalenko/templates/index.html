@@ -1,0 +1,24 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block topquation %}
+
+<div class="row">
+      <div class="col-md-3">
+        <h2 class="modal-header"><a href="#"> New Questions</a></h2>
+      </div>
+      <div class="col-md-9">
+        <h2 class="modal-header"><a href="#">Hot Questions</a></h2>
+      </div>
+</div>
+
+{% endblock topquation %}
+
+{% block content %}
+
+    {% for quastion in quastions %}
+        {% include 'inc/quastion_item.html' %}
+    {% endfor %}
+
+{% endblock content %}
