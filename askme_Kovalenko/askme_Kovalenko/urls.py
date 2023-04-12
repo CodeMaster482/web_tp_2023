@@ -17,12 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from askme import views
+from . import settings
 
 urlpatterns = [
     path('', views.index),
+    path('index', views.index),
     path('login', views.login),
     path('question', views.question),
     path('registration', views.registration),
+    path('ask', views.ask),
+    path('settings', views.settings),
+    path('tag', views.tag),
     path('admin/', admin.site.urls),
 ]
 

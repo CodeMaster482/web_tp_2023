@@ -17,3 +17,15 @@ def login(request):
 
 def registration(request):
     return render(request, 'registration.html')
+
+
+def ask(request):
+    return render(request, 'ask.html')
+
+
+def settings(request):
+    return render(request, 'settings.html')
+
+
+def tag(request):
+    return render(request, 'tag.html')

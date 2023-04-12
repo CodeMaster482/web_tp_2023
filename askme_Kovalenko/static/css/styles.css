@@ -1,10 +1,14 @@
+body {
+  padding: 25px;
+}
 .question {
-    padding: 10px;
-    background-color: #fff;
-    border: solid #ccc;
-    border-width: 1px;
-    margin-bottom: 20px;
-  }
+  padding: 10px;
+  background-color: #fff;
+  border: solid #ccc;
+  border-width: 1px;
+  margin-bottom: 10px;
+  width: 100%;
+}
 
 .answer {
     padding: 10px;
@@ -14,21 +18,53 @@
 
 img {
     border-radius: 50%;
-    width: auto;
-    height: auto;
+    width: 150px;
+    height: 150px;
 }
 
-
-
 .test-bg {
-    background-color: black;
+  color:black;
+  background-color: black;
 }
 
 .btn-upvote {
-    background-image: url(static/images/upvote.svg);
-    background-color: #fff;
+  background-image: url("../images/upvote.svg");
+  filter: hue-rotate(180deg) brightness(80%);
+  -webkit-filter: hue-rotate(180deg) brightness(80%);
+  -moz-filter: hue-rotate(180deg) brightness(80%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  float: right;
+  margin-top: 10px;
+}
+
+.btn-downvote {
+  background-image: url("../images/upvote.svg");
+  filter: hue-rotate(180deg) brightness(80%);
+  -webkit-filter: hue-rotate(180deg) brightness(80%);
+  -moz-filter: hue-rotate(180deg) brightness(80%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  transform: rotate(180deg);
+  float: right;
+  margin-bottom: 10px;
 }
 
 .popular-tag, .best-member {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
+}
+
+.form-control {
+    width: auto;
+    float: right;
+}
+
+.navbar {
+    border-radius: 5px;
 }

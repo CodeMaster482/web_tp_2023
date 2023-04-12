@@ -8,86 +8,19 @@
       <title>Ask me!</title>
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <style>
-        body {
-          padding: 5px;
-        }
-        .question {
-          padding: 10px;
-          background-color: #fff;
-          border: solid #ccc;
-          border-width: 1px;
-          margin-bottom: 20px;
-        }
-
-        .answer {
-            padding: 10px;
-            background-color: #f3f3f3;
-            border: 1px solid #ccc;
-        }
-
-        img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        .test-bg {
-          color:black;
-          background-color: black;
-        }
-
-        .btn-upvote {
-          background-image: url("static/images/upvote.svg");
-          filter: hue-rotate(180deg) brightness(80%);
-          -webkit-filter: hue-rotate(180deg) brightness(80%);
-          -moz-filter: hue-rotate(180deg) brightness(80%);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          width: 60px;
-          height: 60px;
-          float: right;
-          margin-top: 10px;
-        }
-
-        .btn-downvote {
-          background-image: url("static/images/upvote.svg");
-          filter: hue-rotate(180deg) brightness(80%);
-          -webkit-filter: hue-rotate(180deg) brightness(80%);
-          -moz-filter: hue-rotate(180deg) brightness(80%);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          width: 60px;
-          height: 60px;
-          transform: rotate(180deg);
-          float: right;
-          margin-bottom: 10px;
-        }
-
-        .popular-tag, .best-member {
-          margin-bottom: 5%;
-        }
-
-        .form-control {
-            width: 70px;
-            float: right;
-        }
-      </style>
       <!-- jQuery and Bootstrap JS -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
       <!-- Custom Styles -->
-      <!--<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">-->
+      <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
 
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="border-radius: 5px;">
-        <a class="navbar-brand" href="#">Ask me!</a>
+        <a class="navbar-brand" href="index">Ask me!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
 
@@ -98,7 +31,7 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="index">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#">
@@ -130,70 +63,9 @@
 
         </div>
 
-        <div class="col-3 right-col">
-          <div class="popular-tags">
-            <h2 class="title-popular-tags">Popular Tags</h2>
-            <div class="row">
-              <div class="col popular-tag">
-                <a href="#" class="link-dark">perl</a>
-              </div>
-              <div class="col popular-tag">
-                <a href="#" class="link-danger fw-bold">python</a>
-              </div>
-              <div class="col popular-tag">
-                <a href="#" class="link-dark">TechnoPark</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col popular-tag">
-                <a href="#" class="link-danger fw-bold">MySQL</a>
-              </div>
-              <div class="col popular-tag">
-                <a href="#" class="link-success fw-bold">django</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col popular-tag">
-                <a href="#" class="link-dark">Mail.Ru</a>
-              </div>
-              <div class="col popular-tag">
-                <a href="#" class="link-dark">Voloshin</a>
-              </div>
-              <div class="col popular-tag">
-                <a href="#" class="link-warning">FireFox</a>
-              </div>
-            </div>
-          </div>
-          <div class="best-members">
-            <h2 class="title-best-members">Best Members</h2>
-            <div class="best-member">
-              <a href="#">Mr. Freeman</a>
-            </div>
-            <div class="best-member">
-              <a href="#">Dr. House</a>
-            </div>
-            <div class="best-member">
-              <a href="#">Bender</a>
-            </div>
-            <div class="best-member">
-              <a href="#">Queen Victoria</a>
-            </div>
-            <div class="best-member">
-              <a href="#">V. Pupkin</a>
-            </div>
-          </div>
-        </div>
-       </div>
+        {% include 'inc/tags_bar.html' %}
 
-        <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
+      </div>
     </div>
   <footer class="footer mt-auto py-3 bg-body-tertiary">
     <div class="container">
