@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} New {% endblock %}
+{% block title %} Tag {% endblock %}
 {% block content %}
     <div class="row">
-            <h2 class="my-header">New questions</h2>
+        <h2 class="my-header">Questions by tag {{ tag.tag }}</h2>
     </div>
 
     {% for question in questions %}
