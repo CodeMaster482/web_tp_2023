@@ -1,0 +1,9 @@
+<<div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="minus-btn-1">-</button>
+                  </span>
+                  <input type="text" class="form-control" id="number-input-1" value="0">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="plus-btn-1">+</button>
+                  </span>
+                </div>
